@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+  <title>Splode</title>
+<link rel="stylesheet" href="style.css"/> 
+<script src="jquery-1.7.2.js"></script>
+<script src="seedrandom-min.js"></script>
+<script src="splode.js"></script>
+<script type="text/javascript">
+$(function() {
+  var canvasElem = $("#splode_game");
+  var splode = new Splode(401, 451, 50, canvasElem.get(0));
+  canvasElem.click(splode.canvasClick);
+  splode.initGame();
+});
+</script>
+</head>
+<body>
+<h1>Splode</h1>
+<div id="container">
+<div class="left">Score: <span id="score">0</span></div>
+<!--<div class="right">Time playing: <span id="time">0:00</span> minutes</div>-->
+<canvas id="splode_game" width="401" height="451">
+</canvas>
+<p>
+<h3>Todos</h3>
+<ul>
+<li>Proper Rules Impl.</li>
+<li>Animation</li>
+<li>Score</li
+<li>Timer</li>
+</ul>
+</p>
+</div>
+</body>
+</html>
